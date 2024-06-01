@@ -39,8 +39,7 @@ def main():
         parch_slider = st.slider("# Liczba rodziców i/lub dzieci", min_value=0, max_value=6)
         fare_slider = st.slider("Cena biletu", min_value=0, max_value=500, step=10)
 
-    # Ensure feature names are consistent with the training phase
-    sex_male = 1 if sex_radio == 1 else 0  # Assuming 1 for Male and 0 for Female
+    sex_male = 1 if sex_radio == 1 else 0
     data = pd.DataFrame({
         'Pclass': [pclass_radio],
         'Age': [age_slider],
